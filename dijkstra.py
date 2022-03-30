@@ -1,7 +1,7 @@
 """
     Dijkstra's Shortest Path Implementation
     =======================================
-    This implementation is for adjacency matrices to find the shortest path to each vertex from index 0 in a graph
+    This implementation is for adjacency matrices to find the shortest path in a graph
     
     Dijkstra's Algorithm:
     
