@@ -12,18 +12,6 @@
 """
 
 import math
-  
-G = [[0, 0, 2, 3, 0, 0, 0],
-     [0, 0, 1, 0, 0, 5, 0],
-     [2, 4, 0, 3, 2, 0, 0],
-     [1, 0, 1, 0, 0, 1, 0],
-     [0, 0, 3, 0, 0, 0, 2],
-     [0, 2, 0, 1, 0, 0, 1],
-     [0, 0, 4, 0, 0, 4, 0]]
-
-g = len(G)
-U = [i for i in range(g)]
-Q = [[i, math.inf] if i !=0 else [0, 0] for i in range(g)]
 
 def visit(Q, U):
     r = -math.inf
@@ -47,6 +35,18 @@ def dijkstra(Q, U):
             if r in U:
                 U.remove(r)
     return Q
+
+G = [[0, 0, 2, 3, 0, 0, 0],
+     [0, 0, 1, 0, 0, 5, 0],
+     [2, 4, 0, 3, 2, 0, 0],
+     [1, 0, 1, 0, 0, 1, 0],
+     [0, 0, 3, 0, 0, 0, 2],
+     [0, 2, 0, 1, 0, 0, 1],
+     [0, 0, 4, 0, 0, 4, 0]]
+
+g = len(G)
+U = [i for i in range(g)]
+Q = [[i, math.inf] if i !=0 else [0, 0] for i in range(g)]
   
 p = dijkstra(Q, U)
 print(p)
